@@ -1,1 +1,23 @@
+import java.util.ArrayList;
 
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> A = new ArrayList<>();
+        A.add("red");
+        A.add("blue");
+
+        ArrayList<String> B = A;
+
+        B.add("green");
+
+        System.out.println("A: " + A);
+        System.out.println("B: " + B);
+
+        // Independent copy
+        ArrayList<String> C = new ArrayList<>(A);
+        C.add("yellow");
+
+        System.out.println("A: " + A);
+        System.out.println("C: " + C);
+    }
+}
